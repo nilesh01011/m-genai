@@ -42,7 +42,7 @@ function HomePage() {
       <div className='homePage pl-[40px] pr-[40px] w-full flex items-center justify-center flex-col'>
         {/* descriptions */}
         <p className='text-[14px]'>
-          Mahindra's secure platform where you can upload your data for leveraging Generative AI & derive outcomes.
+          Welcome to M-Smart , Next Gen Digital SOP Manual
         </p>
         <h6 className='text-[14px] font-bold mb-[16px]'>Data remains strictly in Mahindra's secure cloud</h6>
 
@@ -64,7 +64,7 @@ function HomePage() {
 
         <div>
           {/* title */}
-          <h1>M smart tag</h1>
+          <h1>M Smart Tab</h1>
           {/* tabs */}
           <div className="flex items-center gap-[16px] m-[16px] ml-0">
             {

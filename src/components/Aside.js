@@ -8,7 +8,8 @@ function Aside({ Menu }) {
             {/* logo */}
             <div className='h-[64px] flex items-center justify-center p-[0_8px] mb-[5vh] mt-[20px]'>
                 <Link to="/">
-                    <img alt="logo" src="./mgen-ai-white.png" className='w-full h-[35px] object-contain' />
+                    <img alt="logo" src="./logo.png" className='w-full h-[65px] object-contain' />
+                    {/* <span className='text-[28px]'>M SMART</span> */}
                 </Link>
             </div>
 
