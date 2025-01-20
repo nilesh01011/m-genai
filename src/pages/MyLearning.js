@@ -1,19 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { myLearning, statsList } from '../data'
 import Aside from '../components/Aside'
 import { LuSunMoon } from 'react-icons/lu'
 
 function MyLearning() {
+    const [titleName, setTitleName] = useState("Learning Center");
+    const [subTitleName, setSubTitleName] = useState("State");
+
     return (
         <div className='w-full flex'>
             {/* aside */}
-            <Aside Menu={myLearning} />
+            <Aside Menu={myLearning} setTitleName={setTitleName} setSubTitleName={setSubTitleName} />
             <div className='w-full ml-[334px] pt-[40px]'>
                 {/* headers */}
                 <div className='w-full flex items-center justify-between mb-[20px] pr-[40px]'>
                     {/* left side */}
                     <div>
-                        <h1 className="text-[24px] text-center">Learning Center</h1>
+                        <h1 className="text-[24px] text-center">{titleName}</h1>
                     </div>
                     {/* right side */}
                     <div className='flex items-center gap-[30px]'>
@@ -36,7 +39,7 @@ function MyLearning() {
                 <div className='flex gap-[40px]'>
 
                     <div className='w-full pt-[40px]'>
-                        <h2 className="text-[18px] text-center">Stats</h2>
+                        <h2 className="text-[18px] text-center">{subTitleName}</h2>
 
                         {/* dummy box */}
                         <div className="h-[210px] bg-[#2f2f2f] my-[30px] rounded-[20px] p-[20px]">

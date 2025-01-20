@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import MenuItems from './MenuItems'
 
-function Aside({ Menu }) {
+function Aside({ Menu, setTitleName, setSubTitleName }) {
     return (
         <aside className='h-full fixed left-0 top-0 max-w-[280px]'>
             {/* logo */}
@@ -16,7 +16,7 @@ function Aside({ Menu }) {
             {/* menu items */}
             <ul className='w-full h-full max-h-[600px] pl-[32px] pr-[32px] pb-[30px] overflow-auto overflowScroll'>
                 {Menu?.map((ele, index) => (
-                    <MenuItems key={index} ele={ele} />
+                    <MenuItems key={index} ele={ele} setSubTitleName={setSubTitleName} setTitleName={setTitleName} />
                 ))}
             </ul>
         </aside>

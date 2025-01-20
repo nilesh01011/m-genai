@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SubMenuItems from "./SubMenuItems";
 import { useNavigate } from "react-router-dom";
 
-function MenuItems({ ele }) {
+function MenuItems({ ele, setTitleName, setSubTitleName }) {
     const [expand, setExpand] = useState(false);
 
     const pathname = window.location.pathname;
@@ -72,7 +72,7 @@ function MenuItems({ ele }) {
             {expand && ele.isFolder && (
                 <ul className="sub-menu box-border flex flex-col pb-[5px]">
                     {ele.items.map((el, index) => (
-                        <SubMenuItems key={index} ele={el} />
+                        <SubMenuItems key={index} ele={el} getTitleName={ele.name} setTitleName={setTitleName} setSubTitleName={setSubTitleName} />
                     ))}
                 </ul>
             )}

@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Aside from '../components/Aside'
 import { SOPRepositoryItems } from '../data'
 import { Link } from 'react-router-dom'
 import { LuSunMoon } from 'react-icons/lu';
 
 function SOPRepository() {
+
+    const [titleName, setTitleName] = useState("Service Initiation");
+    const [subTitleName, setSubTitleName] = useState("Gate In Process");
 
     const tags = [
         {
@@ -26,14 +29,14 @@ function SOPRepository() {
         <>
             <div className='w-full flex gap-[40px]'>
                 {/* aside */}
-                <Aside Menu={SOPRepositoryItems} />
+                <Aside Menu={SOPRepositoryItems} setTitleName={setTitleName} setSubTitleName={setSubTitleName} />
 
                 <div className='w-full flex flex-col pt-[40px] ml-[334px]'>
                     {/* headers */}
                     <div className='w-full flex items-center justify-between mb-[20px] pr-[40px]'>
                         {/* left side */}
                         <div>
-                            <h1 className="text-[24px] text-center">Service Initiation</h1>
+                            <h1 className="text-[24px] text-center">{titleName}</h1>
                         </div>
                         {/* right side */}
                         <div className='flex items-center gap-[30px]'>
@@ -56,7 +59,7 @@ function SOPRepository() {
 
                     <div className='flex gap-[40px]'>
                         <div className='w-full pt-[40px]'>
-                            <h2 className="text-[18px] text-center">Gate In Process</h2>
+                            <h2 className="text-[18px] text-center">{subTitleName}</h2>
 
                             {/* dummy box */}
                             <div className="h-[210px] bg-[#2f2f2f] my-[30px] rounded-[20px]"></div>

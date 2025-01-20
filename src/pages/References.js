@@ -1,20 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Aside from '../components/Aside'
 import { references } from '../data'
 import { LuSunMoon } from 'react-icons/lu'
 
 function References() {
+    const [titleName, setTitleName] = useState("References");
+    const [subTitleName, setSubTitleName] = useState("State");
     return (
         <div className='w-full flex'>
             {/* aside */}
-            <Aside Menu={references} />
+            <Aside Menu={references} setTitleName={setTitleName} setSubTitleName={setSubTitleName} />
 
             <div className='w-full ml-[334px] pt-[40px]'>
                 {/* headers */}
                 <div className='w-full flex items-center justify-between mb-[20px] pr-[40px]'>
                     {/* left side */}
                     <div>
-                        <h1 className="text-[24px] mb-[6px] text-center">References</h1>
+                        <h1 className="text-[24px] mb-[6px] text-center">{titleName}</h1>
                     </div>
                     {/* right side */}
                     <div className='flex items-center gap-[30px]'>
