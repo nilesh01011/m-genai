@@ -6,7 +6,7 @@ function Footer() {
       {/* footer logo */}
       <span className='text-[11px]'>Powered by </span>
       <span className='h-[12px]'>
-        <img src='./mai-darkmode.png' alt='Logo' className='w-[100%] h-[100%] object-contain' />
+        <img src='/mai-darkmode.png' alt='Logo' className='w-[100%] h-[100%] object-contain' />
       </span>
     </div>
   )

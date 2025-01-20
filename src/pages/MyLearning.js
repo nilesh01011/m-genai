@@ -1,7 +1,6 @@
 import React from 'react'
-import { myLearning } from '../data'
+import { myLearning, statsList } from '../data'
 import Aside from '../components/Aside'
-import { Link } from 'react-router-dom'
 import { LuSunMoon } from 'react-icons/lu'
 
 function MyLearning() {
@@ -9,7 +8,7 @@ function MyLearning() {
         <div className='w-full flex'>
             {/* aside */}
             <Aside Menu={myLearning} />
-            <div className='w-full pl-[40px] pt-[40px]'>
+            <div className='w-full ml-[334px] pt-[40px]'>
                 {/* headers */}
                 <div className='w-full flex items-center justify-between mb-[20px] pr-[40px]'>
                     {/* left side */}
@@ -40,12 +39,21 @@ function MyLearning() {
                         <h2 className="text-[18px] text-center">Stats</h2>
 
                         {/* dummy box */}
-                        <div className="h-[210px] bg-[#2f2f2f] my-[30px] rounded-[20px]"></div>
+                        <div className="h-[210px] bg-[#2f2f2f] my-[30px] rounded-[20px] p-[20px]">
+                            {/* lists */}
+                            <ul className='w-full flex flex-col gap-[10px]'>
+                                {
+                                    statsList?.map((ele, i) => (
+                                        <li key={i} className='text-[14px]'>{ele.name}</li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
                     </div>
 
                     {/* right sides */}
                     <div className='min-w-[230px] pr-[40px] flex flex-col justify-between pb-[170px]' style={{ height: "calc(100vh - 46px)" }}>
-                        <p className='w-full mb-[10px] tags rounded-[10px] min-h-[100px] text-[12px] flex p-[15px]'>SCORE</p>
+                        <p className='w-full mb-[10px] tags rounded-[10px] min-h-[100px] text-[12px] flex p-[15px] mt-[150px]'>SCORE</p>
                     </div>
                 </div>
 

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import InputsContainer from '../components/InputsContainer'
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 
 function HomePage() {
+
+  const [inputFields, setInputFields] = useState("")
 
   const tags = [
     {
@@ -34,7 +36,7 @@ function HomePage() {
       name: "References",
       link: "/references",
     },
-  ]
+  ];
 
   return (
     <>
@@ -49,13 +51,13 @@ function HomePage() {
         {/* title */}
         <h1 className='text-[23px]'>What can I help you with?</h1>
         {/* inputs container */}
-        <InputsContainer />
+        <InputsContainer inputFields={inputFields} setInputFields={setInputFields} />
 
         {/* tags */}
         <div className="flex items-center gap-[10px] m-[16px]">
           {
             tags.map((tag, i) => (
-              <p key={i} className="p-[3px_9px] flex items-center gap-[5px] rounded-[10px] border-[1px] border-[#a7a7a7]">
+              <p key={i} className="p-[3px_9px] flex items-center gap-[5px] rounded-[10px] border-[1px] border-[#a7a7a7] cursor-pointer" onClick={() => setInputFields(tag.name)}>
                 <span className="text-[12px]">{tag.name}</span>
               </p>
             ))
@@ -73,7 +75,7 @@ function HomePage() {
                   <span className='text-[12px]'>{tag.name}</span>
                   <span className='absolute right-[15px] bottom-[15px] w-[30px] h-[30px] rounded-full bg-white flex items-center justify-center'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                      <path d="M14.2864 8.14041L10.2162 4.07019M14.2864 8.14041L10.2162 12.2106M14.2864 8.14041L7.16349 8.14041M3.43246 8.14041L5.12838 8.14041" stroke="#231F20" stroke-width="0.938265" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M14.2864 8.14041L10.2162 4.07019M14.2864 8.14041L10.2162 12.2106M14.2864 8.14041L7.16349 8.14041M3.43246 8.14041L5.12838 8.14041" stroke="#231F20" strokeWidth="0.938265" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </span>
                 </Link>

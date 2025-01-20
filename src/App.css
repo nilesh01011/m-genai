@@ -10,11 +10,19 @@ body {
   height: 100%;
   background-color: #1a1a1a;
   color: white;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+.overflowScroll {
+  height: 100%;
+}
+
+.overflowScroll::-webkit-scrollbar {
+  width: 0;
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
 }
 

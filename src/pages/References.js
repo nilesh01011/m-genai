@@ -9,7 +9,7 @@ function References() {
             {/* aside */}
             <Aside Menu={references} />
 
-            <div className='w-full pl-[40px] pt-[40px]'>
+            <div className='w-full ml-[334px] pt-[40px]'>
                 {/* headers */}
                 <div className='w-full flex items-center justify-between mb-[20px] pr-[40px]'>
                     {/* left side */}

@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import SOPRepository from './pages/SOPRepository';
 import MyLearning from './pages/MyLearning';
 import References from './pages/References';
-import ModuleOne from './pages/ModuleOne';
+import Stats from './pages/Stats';
+import './App.css';
 
 function App() {
   return (
@@ -19,8 +19,9 @@ function App() {
           <Route path="/sop-repository" element={<SOPRepository />}></Route>
           {/* =================== MY LEARNING PAGE ============= */}
           <Route path="/my-learning" element={<MyLearning />}></Route>
+          <Route path="/my-learning/stats" element={<Stats />}></Route>
 
-          <Route path="/my-learning/module-1" element={<ModuleOne />}></Route>
+          {/* <Route path="/my-learning/stats" element={<ModuleOne />}></Route> */}
           {/* =================== REFERENCES PAGE ============= */}
           <Route path="/references" element={<References />}></Route>
         </Routes>

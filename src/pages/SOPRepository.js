@@ -9,6 +9,7 @@ function SOPRepository() {
     const tags = [
         {
             name: "Previous Process",
+            link: "/"
         },
         {
             name: "App Screen",
@@ -27,7 +28,7 @@ function SOPRepository() {
                 {/* aside */}
                 <Aside Menu={SOPRepositoryItems} />
 
-                <div className='w-full flex flex-col pt-[40px]'>
+                <div className='w-full flex flex-col pt-[40px] ml-[334px]'>
                     {/* headers */}
                     <div className='w-full flex items-center justify-between mb-[20px] pr-[40px]'>
                         {/* left side */}
@@ -66,11 +67,11 @@ function SOPRepository() {
                             <div className="flex items-center gap-[10px] m-[16px] mx-0">
                                 {
                                     tags.map((tag, i) => (
-                                        <Link to={tag.link} key={i} className="tags w-full h-[100px] p-[15px] flex gap-[5px] rounded-[10px] cursor-pointer relative">
+                                        <Link to={tag?.link} key={i} className="tags w-full h-[100px] p-[15px] flex gap-[5px] rounded-[10px] cursor-pointer relative">
                                             <span className='text-[12px]'>{tag.name}</span>
                                             <span className='absolute right-[15px] bottom-[15px] w-[30px] h-[30px] rounded-full bg-white flex items-center justify-center'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none" style={{ transform: i === 0 && "rotate(180deg)", }}>
-                                                    <path d="M14.2864 8.14041L10.2162 4.07019M14.2864 8.14041L10.2162 12.2106M14.2864 8.14041L7.16349 8.14041M3.43246 8.14041L5.12838 8.14041" stroke="#231F20" stroke-width="0.938265" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M14.2864 8.14041L10.2162 4.07019M14.2864 8.14041L10.2162 12.2106M14.2864 8.14041L7.16349 8.14041M3.43246 8.14041L5.12838 8.14041" stroke="#231F20" strokeWidth="0.938265" strokeLinecap="round" strokeLinejoin="round" />
                                                 </svg>
                                             </span>
                                         </Link>
@@ -80,15 +81,22 @@ function SOPRepository() {
                         </div>
 
                         {/* right sides */}
-                        <div className='min-w-[230px] pr-[40px] flex flex-col justify-between pb-[170px]' style={{ height: "calc(100vh - 46px)" }}>
+                        <div className='min-w-[230px] pr-[40px] flex flex-col justify-end pb-[170px]' style={{ height: "calc(100vh - 46px)" }}>
                             {/* <p className='w-full mb-[10px] tags rounded-[10px] min-h-[100px] text-[12px] flex p-[15px]'>M-SMART ASSIST</p> */}
-                            <div className='flex flex-col items-center gap-[7px] cursor-pointer'>
+                            <div className='flex flex-col items-center gap-[7px] cursor-pointer pb-[160px]'>
                                 <p className='h-[50px]'>
                                     <img src="./image.png" alt='bot-images' className='w-full h-full object-contain' />
                                 </p>
                                 <span className='text-[12px]'>M-SMART ASSIST</span>
                             </div>
-                            <p className='w-full tags rounded-[10px] min-h-[100px] text-[12px] p-[15px]'>QUIZ ME</p>
+
+                            <div className='flex flex-col items-center gap-[7px] cursor-pointer pb-[50px]'>
+                                <p className='h-[50px]'>
+                                    <img src="./quiz.png" alt='bot-images' className='w-full h-full object-contain' />
+                                </p>
+                                <span className='text-[12px]'>QUIZ ME</span>
+                            </div>
+                            {/* <p className='w-full tags rounded-[10px] min-h-[100px] text-[12px] p-[15px]'>QUIZ ME</p> */}
                         </div>
                     </div>
 

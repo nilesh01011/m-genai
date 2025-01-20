@@ -1,14 +1,17 @@
 export const myLearning = [
     {
-        name: "Stats",
+        name: "My Learning",
         isFolder: true,
         items: [
             {
-                name: "Module 1",
-                link: "/my-learning/module-1"
+                name: "Stats",
+                link: "/my-learning/stats"
             },
             {
-                name: "Module 2"
+                name: "Service initiation",
+            },
+            {
+                name: "Demand Capturing",
             },
         ]
     },
@@ -34,58 +37,77 @@ export const myLearning_2 = [
 
 export const SOPRepositoryItems = [
     {
-        name: "Section",
+        name: "Manpower",
         isFolder: true,
         items: [
             {
-                name: "Sub Section 1"
+                name: "ORG Structure",
             },
             {
-                name: "Sub Section 2"
+                name: "KPI"
             },
             {
-                name: "Sub Section 3"
+                name: "Rewards and Recognition",
             },
             {
-                name: "Sub Section 4"
+                name: "Mile Process"
             }
         ]
     },
 
     {
-        name: "Section 2",
+        name: "Service initiation",
         isFolder: true,
         items: [
             {
-                name: "Sub Section 1"
+                name: "Appointment Booking"
             },
             {
-                name: "Sub Section 2"
+                name: "Welcome Call"
             },
             {
-                name: "Sub Section 3"
+                name: "Pick and Drop"
             },
             {
-                name: "Sub Section 4"
+                name: "Security Guard Process"
+            },
+            {
+                name: "Welcome Process by Hostess"
+            },
+            {
+                name: "RM Allocation"
+            },
+            {
+                name: "Contact Validations"
             }
         ]
     },
 
     {
-        name: "Section 3",
+        name: "Demand Capturing",
         isFolder: true,
         items: [
             {
-                name: "Sub Section 1"
+                name: "SVOC"
             },
             {
-                name: "Sub Section 2"
+                name: "Vehicle Health check list"
             },
             {
-                name: "Sub Section 3"
+                name: "Vehicle inspections/DVI"
             },
             {
-                name: "Sub Section 4"
+                name: "FQC Assignments"
+            },
+
+            {
+                name: "Pre Road Test"
+            },
+            {
+                name: "Observations Captured"
+            },
+            {
+                name: "Estimate and Customer Approval"
             }
         ]
     },
@@ -103,5 +125,23 @@ export const references = [
     },
     {
         name: "Contact M&M",
+    },
+];
+
+export const statsList = [
+    {
+        name: "Module Completed"
+    },
+    {
+        name: "Total hours Spent"
+    },
+    {
+        name: "Quizzes Taken"
+    },
+    {
+        name: "Overall Scores"
+    },
+    {
+        name: "My Rank"
     },
 ]

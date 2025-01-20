@@ -32,7 +32,7 @@ function MenuItems({ ele }) {
                 className={`flex items-center gap-[12px] p-[12px] justify-between`}
                 onClick={() => handleExpanded(ele.link)}
             >
-                <p className="flex items-center text-[16px] gap-[4px]">
+                <p className="flex items-center text-[14px] gap-[4px]">
                     <small
                     >
                         {ele.icon}
